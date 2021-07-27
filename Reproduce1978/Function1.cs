@@ -11,7 +11,6 @@ namespace Reproduce1978
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "users/{userId}")] User user,
-            string userId,
             ILogger log)
         {
             return new OkObjectResult(user);
